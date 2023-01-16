@@ -25,6 +25,7 @@ class LogRepository implements InterfaceLogRepository
     }
 
     /**
+     * this private method is to make query filter and return it
      * @param Builder $query
      * @param $items
      * @return Builder
@@ -34,7 +35,7 @@ class LogRepository implements InterfaceLogRepository
     {
         return $query->when(isset($items["startDate"]), function ($query) use ($items) {
             $query->where("created_date", ">=", $items["startDate"]);
-        })
+            })
             ->when(isset($items["endDate"]), function ($query) use ($items) {
                 $query->where("created_date", "<=", $items["endDate"]);
             })

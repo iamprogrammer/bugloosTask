@@ -34,7 +34,7 @@ class parseLog extends Command
 
     /**
      * Execute the console command.
-     *
+     * create records
      * @return int
      */
     public function handle()

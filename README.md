@@ -23,14 +23,18 @@ What are your tasks?
 
 - To run api to get count of logs with/without filter use this route:`/api/logs/count?serviceNames=order `
 - Other params that you can use are : `['statusCode','startDate','endDate']`
-- params can use together
+- params can be used together
 
 #### 3 - You can run feature test by using:` php artisan test --filter LogsTest `
 
 #### 4 - We could make test to test validation ,all filter params  and test command 
 
-#### 5 - We could use model to add the logic of filtering and counting, but I used Repository pattern to make my code cleaner and more reusable.
+##### 5 - We could use model to add the logic of filtering and counting, but I used Repository pattern to make my code cleaner and more reusable.
 
-#### 6 - We can use OpenApi/swagger to make document .  
+##### 6 - We can use OpenApi/swagger to make document .  
 
-#### 7 - I wanted to use jwt to login user with token and make the api secure , but it was not requested in the challenge text.
+##### 7 - I wanted to use jwt to login user with token and make the api secure , but it was not requested in the challenge text.
+
+##### 8 - We can clear log file after inserting to database to prevent insert duplicate record, but I didn't do that because when you want to test it, don't lose the file .
+
+##### 9 - We can use the queue and run in the background to reduce the server pressure
