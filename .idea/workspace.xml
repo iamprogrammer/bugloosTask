@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ec3f92e-d574-4492-8172-623559037098" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/parseLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/parseLog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LogFileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LogFileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/FilterLogeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FilterLogRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_101315_create_logs_txt_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_15_101315_create_logs_txt_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs.txt" afterDir="false" />
-    </list>
+    <list default="true" id="9ec3f92e-d574-4492-8172-623559037098" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +157,7 @@
       <updated>1673609283680</updated>
       <workItem from="1673609285271" duration="2771000" />
       <workItem from="1673774852337" duration="27729000" />
-      <workItem from="1673867196116" duration="5001000" />
+      <workItem from="1673867196116" duration="5739000" />
     </task>
     <servers />
   </component>

@@ -26,11 +26,11 @@ class LogRepository implements InterfaceLogRepository
 
     /**
      * this private method is to make query filter and return it
-     * @param Builder $query
+     * @param $query
      * @param $items
      * @return Builder
      */
-    private function getFilteredQuery(Builder $query, $items)
+    private function getFilteredQuery($query, $items)
     : Builder
     {
         return $query->when(isset($items["startDate"]), function ($query) use ($items) {
