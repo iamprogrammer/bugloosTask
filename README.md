@@ -9,7 +9,6 @@
 - `php artisan serve`
 
 
-
 # About this project
 
 There is a log file that contains log lines from multiple microservices. This file is very large and has almost 100 million lines. A small sample of this log file can be found in `logs.txt`
@@ -27,14 +26,16 @@ What are your tasks?
 
 #### 3 - You can run feature test by using:` php artisan test --filter LogsTest `
 
-#### 4 - We could make test to test validation ,all filter params  and test command 
+ 4 - We could make test to test validation ,all filter params  and test command 
 
-##### 5 - We could use model to add the logic of filtering and counting, but I used Repository pattern to make my code cleaner and more reusable.
+ 5 - We could use model to add the logic of filtering and counting, but I used Repository pattern to make my code cleaner and more reusable.
 
-##### 6 - We can use OpenApi/swagger to make document .  
+ 6 - We can use OpenApi/swagger to make document .  
 
-##### 7 - I wanted to use jwt to login user with token and make the api secure , but it was not requested in the challenge text.
+ 7 - I wanted to use jwt to login user with token and make the api secure , but it was not requested in the challenge text.
 
-##### 8 - We can clear log file after inserting to database to prevent insert duplicate record, but I didn't do that because when you want to test it, don't lose the file .
+ 8 - We can clear log file after inserting to database to prevent insert duplicate record, but I didn't do that because when you want to test it, don't lose the file .
 
-##### 9 - We can use the queue and run in the background to reduce the server pressure
+ 9 - We can use the queue and run in the background to reduce the server pressure
+
+ 10 - Because it was not mentioned in the text of the task, I assumed that the file is always the same and includes all items.Otherwise, I have to used regex or checked whether this item exists or not.

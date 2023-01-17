@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\FilterLogeRequest;
+use App\Http\Requests\FilterLogRequest;
 use App\Repositories\InterfaceLogRepository;
 use Illuminate\Contracts\Container\BindingResolutionException;
 
@@ -24,9 +24,9 @@ class LogFileController extends Controller
      * this action return count of logs that exists in database by accepting some filters.
      * filters are contains : [startDate, endDate, serviceNames, statusCode]
      */
-    public function LogCount(FilterLogeRequest $request)
+    public function LogCount(FilterLogRequest $request)
     {
-        $count = $this->logRepo->getLogsCount($request->all());
+        $count = $this->logRepo->getLogsCount($request->validated());
 
         return response(["count" => $count]);
     }

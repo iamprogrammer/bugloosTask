@@ -43,16 +43,23 @@ class parseLog extends Command
         $handle = fopen(storage_path("/logs.txt"), "r") or die("Couldn't get handle");
 
         while (!feof($handle)) {
-            $line      = fgets($handle);
-            $lineArray = $this->getArrayOfLine($line);
-            LogFile::firstOrCreate([
-                "service_name" => $lineArray[0],
-                "status_code"  => $lineArray[5],
-                "method"       => $lineArray[2],
-                "route"        => $lineArray[3],
-                "created_date" => $lineArray[1]
-            ]);
+            $line = trim(fgets($handle), "\n\r\t\0");
 
+            if ($line != "") {
+                try {
+                    $lineArray = $this->getArrayOfLine($line);
+                    LogFile::firstOrCreate([
+                        "service_name" => $lineArray[0],
+                        "status_code"  => $lineArray[5],
+                        "method"       => $lineArray[2],
+                        "route"        => $lineArray[3],
+                        "created_date" => $lineArray[1]
+                    ]);
+                } catch (\Exception $e) {
+                    Log::error($e->getMessage());
+                }
+
+            }
         }
         fclose($handle);
         return 0;
@@ -77,8 +84,9 @@ class parseLog extends Command
             if (str_contains($item, '[')) {
                 $cleanArray[] = $this->createDateField($item);
             }
-            else
-                $cleanArray[] = str_replace(['"', "\r\n", ' '], '', $item);
+            else {
+                $cleanArray[] = str_replace(['"', ' '], '', $item);
+            }
         }
         return $cleanArray;
     }

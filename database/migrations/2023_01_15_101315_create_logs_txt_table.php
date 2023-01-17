@@ -15,11 +15,11 @@ class CreateLogsTxtTable extends Migration
     {
         Schema::create('logs_txt', function (Blueprint $table) {
             $table->id();
-            $table->string("service_name",191);
-            $table->string("status_code",191);
+            $table->string("service_name",191)->nullable()->index();
+            $table->string("status_code",191)->nullable()->index();
             $table->string("route",191);
             $table->string("method",20);
-            $table->string("created_date",191);
+            $table->string("created_date",191)->nullable()->index();
             $table->timestamps();
         });
     }
